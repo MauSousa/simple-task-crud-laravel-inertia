@@ -5,6 +5,7 @@
 - Sqlite3
 - Inertia 2.0
 - Vue 3
+- TypeScript
 - Bun
 - TailwindCSS
 
