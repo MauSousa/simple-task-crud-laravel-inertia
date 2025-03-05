@@ -171,7 +171,7 @@ const submit = () => {
                                 <TableCell>{{ task.is_completed ? 'Completed' : 'Pending' }}</TableCell>
                                 <TableCell>{{ task.name }}</TableCell>
                                 <TableCell>{{ task.description }}</TableCell>
-                                <TableCell class="flex space-x-5">
+                                <TableCell class="flex justify-end items-center space-x-5">
                                     <Button v-if="!task.is_completed" variant="secondary"
                                         @click="completeTask(task.id)">Complete</Button>
                                     <Button variant="destructive" @click="deleteTask(task.id)">Delete</Button>
