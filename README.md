@@ -5,7 +5,8 @@
 - Sqlite3
 - Inertia 2.0
 - Vue 3
-- Bundler -> Bun
+- Bun
+- TailwindCSS
 
 ## Follow the next instructions to install the project
 1. git clone the project
