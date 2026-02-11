@@ -1,6 +1,7 @@
-# Simple task dashboard CRUD
+# Simple task dashboard
 
 ## Stack:
+
 - Laravel 12
 - Sqlite3
 - Inertia 2.0
@@ -9,12 +10,8 @@
 - Bun
 - TailwindCSS
 
-## Follow the next instructions to install the project
-1. git clone the project
-2. ```cp .env.example .env```
-3. ```composer install```
-4. ```php artisan key:generate```
-5. ```php artisan migrate```
-6. ```bun install```
-7. ```composer run dev```
-8. Register and start using the project
+## Installation instructions
+
+1. Clone the project 
+2. Run `composer setup` to setup the project
+3. Register and start using the project
