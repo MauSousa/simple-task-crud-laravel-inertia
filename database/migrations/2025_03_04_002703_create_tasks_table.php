@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table): void {
             $table->ulid('id')->primary();
             $table->string('name');
             $table->text('description');

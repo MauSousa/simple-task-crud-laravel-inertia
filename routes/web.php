@@ -10,15 +10,15 @@ Route::get('/', function () {
 
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard', [
-        'tasks' => Task::orderBy('is_completed', 'asc')->orderBy('updated_at', 'desc')->get()->map(fn ($task) => [
+        'tasks' => Task::query()->orderBy('is_completed', 'asc')->latest('updated_at')->get()->map(fn ($task) => [
             'id' => $task->id,
             'name' => $task->name,
             'slug' => $task->slug,
             'is_completed' => $task->is_completed,
             'description' => $task->description,
         ]),
-        'completed' => Task::where('is_completed', 1)->count(),
-        'pending' => Task::where('is_completed', 0)->count(),
+        'completed' => Task::query()->where('is_completed', 1)->count(),
+        'pending' => Task::query()->where('is_completed', 0)->count(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
